@@ -13,8 +13,8 @@ function addTodo(item) {
     if (item !== '') {
         const todo = {
             id: Date.now(),
-            name: item;
-            completed: false;
+            name: item,
+            completed: false,
         };
 
         todos.push(todo);
