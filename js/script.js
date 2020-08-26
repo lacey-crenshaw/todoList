@@ -36,7 +36,7 @@ function renderTodos(todos) {
         }
 
         li.innerHTML = `
-        <input type="checkbox" class="checkbox" ${checked}>
+        <input type="checkbox" class="checkbox" id="_checkbox" ${checked}>
         ${item.name}
         <button class="delete-button">💣</button>
         `;
@@ -63,8 +63,11 @@ getFromLocalStorage();
 todoItemsList.addEventListener('click', function (event) {
     if (event.target.type === 'checkbox') {
         toggle(event.target.parentElement.getAttribute('data-key'));
+    }
+    if (event.target.classList.contains('delete-button')) {
         deleteTodo(event.target.parentElement.getAttribute('data-key'));
     }
+
 });
 
 function toggle(id) {
