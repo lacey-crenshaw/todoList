@@ -13,6 +13,58 @@ body {
     background: linear-gradient(#fe0ab7, #e50185);
 }
 
+.top-nav {
+    overflow: hidden;
+    background-color: #e9ff88;
+
+}
+
+.top-nav .todo-list-input {
+    float: right;
+}
+
+.top-nav input[type=text] {
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 17px;
+    border: none;
+}
+
+.top-nav .todo-list-input button {
+    float: right;
+    padding: 6px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: transparent;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+}
+
+.top-nav .todo-list-input button:hover {
+    background: #e50185;
+}
+
+@media screen and (max-width: 600px) {
+    .top-nav .todo-list-input {
+        float: none;
+    }
+
+    .top-nav input[type=text],
+    .top-nav .todo-list-input button {
+        float: none;
+        display: block;
+        text-align: left;
+        width: 100%;
+        margin: 0;
+        padding: 14px;
+    }
+
+    .top-nav input[type=text] {
+        border: 1px solid #ccc;
+    }
+}
+
 button:hover {
     cursor: pointer;
     background-color: #e9ff88;
@@ -38,7 +90,7 @@ h1 {
     font-size: 3rem;
 }
 
-.todo-form {
+.todo-form .todo-list-form {
     margin: 40px 0;
 }
 
