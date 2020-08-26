@@ -2,7 +2,12 @@ const todoForm = document.querySelector('.todo-form');
 const todoInput = document.querySelector('.todo-input')
 const todoItemsList = document.querySelector('.todo-items')
 
+const todoList = document.querySelector('.todo-list')
+const todoListInput = document.querySelector('.todo-list-input')
+const todoListName = document.querySelector('.todo-list-name')
+
 let todos = [];
+let list = [];
 
 todoForm.addEventListener('submit', function (event) {
     event.preventDefault();
